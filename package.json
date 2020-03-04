@@ -1,0 +1,23 @@
+{
+  "name": "dndapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pphelps28/5eUI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pphelps28/5eUI/issues"
+  },
+  "homepage": "https://github.com/pphelps28/5eUI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

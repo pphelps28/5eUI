@@ -21,13 +21,14 @@ body {
 }
 
 .header {
-    color: rgba(216, 219, 27, 0.808);
+    color: rgba(216, 219, 27, 0.952);
     display: flex;
     justify-content: flex-start;
     margin: 10px;
     margin-bottom: 0px;
     border-radius: 50px;
-    transition: all .6s ease-in-out;
+    transition: color 1s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .header:hover {
@@ -77,18 +78,19 @@ body {
 }
 
 #display {
-    border-left: rgba(89, 44, 0, 0.452) solid 5px;
+    border-left: rgba(89, 44, 0, 0.548) solid 5px;
     font-size: large;
     display: flex;
     flex-direction: column;
     padding: 30px;
     text-align: left;
-    color: rgb(172, 171, 171);
-    background-color: rgb(255, 250, 246);
+    color: rgba(89, 44, 0, 0.89);
+    background-image: url(./parchment.jpg);
     width: 50vw;
     height: auto;
     box-shadow: 10px 13px 8px rgb(1, 26, 51);
-    margin: 10px
+    margin: 10px;
+    border-radius: 1%;
 }
 
 #decor {
@@ -101,7 +103,7 @@ body {
 }
 
 .list-item {
-    color: rgba(89, 44, 0, 0.87);
+    color: rgba(89, 44, 0, 0.89);
     margin: 3px;
 }
 
@@ -122,6 +124,7 @@ body {
     #head-input {
         display: flex;
         flex-direction: column;
+        
     }
     #display {
         text-align: center;

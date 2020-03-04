@@ -1,5 +1,5 @@
 "use strict"
-const params = ['_id', 'index', 'url', 'count', 'results', 'desc', 'category', 'actions', 'skills']
+const params = ['_id', 'index', 'url', 'count', 'results', 'desc', 'category', 'actions', 'skills','bonus']
 const queryExceptions = ['classes-spells','classes-features','classes-levels']
 $(document).ready(function () {
     $(".input-field").keydown(function (event) {
