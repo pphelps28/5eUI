@@ -1,5 +1,6 @@
 "use strict"
-const params = ['_id', 'index', 'url', 'count', 'results', 'desc', 'category','actions','skills']
+const params = ['_id', 'index', 'url', 'count', 'results', 'desc', 'category', 'actions', 'skills']
+const queryExceptions = ['classes-spells','classes-features','classes-levels']
 $(document).ready(function () {
     $(".input-field").keydown(function (event) {
         let apiExt = event.target.id
@@ -18,9 +19,10 @@ $(document).ready(function () {
                             }, 1500);
                         }
                     },
-                    url: `http://www.dnd5eapi.co/api/${apiExt}/${sanitizedEntry}`,
+                    url: !queryExceptions.includes(apiExt) ? `http://www.dnd5eapi.co/api/${apiExt}/${sanitizedEntry}` : `http://www.dnd5eapi.co/api/${apiExt.split('-')[0]}/${sanitizedEntry}/${apiExt.split('-')[1]}`,
                     success: function (data) {
                         data = flattenObject(data)
+                        console.log(data)
                         let props = Object.keys(data).filter(e => !params.includes(e))
                         props = props.filter(e => !e.includes('url'))
                         props = props.filter(e => !e.includes('index'))
