@@ -19,7 +19,7 @@ $(document).ready(function () {
                             }, 1500);
                         }
                     },
-                    url: !queryExceptions.includes(apiExt) ? `http://www.dnd5eapi.co/api/${apiExt}/${sanitizedEntry}` : `http://www.dnd5eapi.co/api/${apiExt.split('-')[0]}/${sanitizedEntry}/${apiExt.split('-')[1]}`,
+                    url: !queryExceptions.includes(apiExt) ? `https://www.dnd5eapi.co/api/${apiExt}/${sanitizedEntry}` : `http://www.dnd5eapi.co/api/${apiExt.split('-')[0]}/${sanitizedEntry}/${apiExt.split('-')[1]}`,
                     success: function (data) {
                         data = flattenObject(data)
                         console.log(data)
